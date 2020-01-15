@@ -1,0 +1,36 @@
+{
+    "name": "shoplemo/php-sdk",
+    "type": "library",
+    "description": "shoplemo checkout api php client",
+    "homepage": "https://www.shoplemo.com",
+    "keywords": [
+      "shoplemo",
+      "shoplemo checkout",
+      "shoplemo payment",
+      "shoplemo php",
+      "shoplemo.com",
+      "shoplemo api",
+      "shoplemo api php client",
+      "shoplemo api php",
+      "payment processing"
+    ],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "shoplemo & contributors",
+        "homepage": "https://github.com/shoplemo/php-sdk/contributors"
+      }
+    ],
+    "require": {
+      "php": ">=5.6.0",
+      "ext-curl": "*"
+    },
+    "autoload": {
+      "psr-4": {
+        "Shoplemo\\": "source/"
+      }
+    },
+    "scripts": {
+      "test": "vendor/bin/phpunit --colors"
+    }
+  }
