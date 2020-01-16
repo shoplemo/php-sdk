@@ -22,12 +22,12 @@ class CreditCard extends Request
         parent::__construct($config, self::PATH);
     }
 
-    public function getUser_email()
+    public function getUserEmail()
     {
         return $this->user_email;
     }
 
-    public function setUser_email($user_email)
+    public function setUserEmail($user_email)
     {
         $this->user_email = $user_email;
     }
@@ -72,12 +72,12 @@ class CreditCard extends Request
         $this->billing_details = $billing_details;
     }
 
-    public function getCustom_params()
+    public function getCustomParams()
     {
         return $this->custom_params;
     }
 
-    public function setCustom_params($custom_params)
+    public function setCustomParams($custom_params)
     {
         $this->custom_params = $custom_params;
     }

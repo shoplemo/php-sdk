@@ -1,37 +1,46 @@
 <?php
+
 namespace Shoplemo;
 
-class Config{
+class Config
+{
 	private $apiKey;
 	private $secretKey;
 	private $serviceBaseUrl;
-	private $SDKVersion = "1.0.0";
-	
-	public function getSDKVersion(){
-		return $this->SDKVersion;
+	private $sdkVersion = "1.0.0";
+
+	public function getSDKVersion()
+	{
+		return $this->sdkVersion;
 	}
 
-	public function getApiKey(){
+	public function getApiKey()
+	{
 		return $this->apiKey;
 	}
 
-	public function setApiKey($apiKey){
+	public function setApiKey($apiKey)
+	{
 		$this->apiKey = $apiKey;
 	}
 
-	public function getSecretKey(){
+	public function getSecretKey()
+	{
 		return $this->secretKey;
 	}
 
-	public function setSecretKey($secretKey){
+	public function setSecretKey($secretKey)
+	{
 		$this->secretKey = $secretKey;
 	}
 
-	public function getServiceBaseUrl(){
+	public function getServiceBaseUrl()
+	{
 		return $this->serviceBaseUrl;
 	}
 
-	public function setServiceBaseUrl($serviceBaseUrl){
+	public function setServiceBaseUrl($serviceBaseUrl)
+	{
 		$this->serviceBaseUrl = $serviceBaseUrl;
 	}
 }

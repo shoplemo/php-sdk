@@ -22,12 +22,12 @@ class Buyer extends JsonSerializableModel
 		$this->port = Helper::getPort();
 	}
 
-	public function getIdentity_number()
+	public function getIdentityNumber()
 	{
 		return $this->identity_number;
 	}
 
-	public function setIdentity_number($identity_number)
+	public function setIdentityNumber($identity_number)
 	{
 		$this->identity_number = $identity_number;
 	}

@@ -3,9 +3,9 @@
 namespace Shoplemo\Model;
 
 use Shoplemo\JsonSerializableModel;
+
 class BasketItem extends JsonSerializableModel
 {
- 
 	private $category;
 	private $name;
 	private $type;

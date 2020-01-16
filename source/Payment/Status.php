@@ -2,7 +2,6 @@
 
 namespace Shoplemo\Payment;
 
-use Shoplemo\Model;
 use Shoplemo\Config;
 use Shoplemo\Request;
 

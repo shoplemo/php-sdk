@@ -18,30 +18,34 @@ class Billing extends JsonSerializableModel
 	function __construct()
 	{
 	}
-	
-	public function getFull_name()
+
+	public function getFullname()
 	{
 		return $this->full_name;
 	}
 
-	public function setFull_name($full_name)
+	public function setFullName($full_name)
 	{
 		$this->full_name = $full_name;
 	}
 
-	public function getTax_number(){
+	public function getTaxNumber()
+	{
 		return $this->tax_number;
 	}
 
-	public function setTax_number($tax_number){
+	public function setTaxNumber($tax_number)
+	{
 		$this->tax_number = $tax_number;
 	}
 
-	public function getTax_house(){
+	public function getTaxHouse()
+	{
 		return $this->tax_house;
 	}
 
-	public function setTax_house($tax_house){
+	public function setTaxHouse($tax_house)
+	{
 		$this->tax_house = $tax_house;
 	}
 
@@ -85,12 +89,12 @@ class Billing extends JsonSerializableModel
 		$this->country = $country;
 	}
 
-	public function getPostal_code()
+	public function getPostalCode()
 	{
 		return $this->postal_code;
 	}
 
-	public function setPostal_code($postal_code)
+	public function setPostalCode($postal_code)
 	{
 		$this->postal_code = $postal_code;
 	}
