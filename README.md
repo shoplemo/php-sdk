@@ -39,7 +39,7 @@ require_once('/path/to/php-sdk/Bootstrap.php');
 
 ```php
 $config = new \Shoplemo\Config();
-$config->setAPIKey('TEST')|
+$config->setAPIKey('TEST');
 $config->setSecretKey('TEST');
 $config->setServiceBaseUrl('https://payment.shoplemo.com');
 
@@ -72,30 +72,30 @@ $basket->addItem($item2);
 
 // alıcı ile ilgili elimizde olan bilgileri paylaşabilirsiniz. (opsiyonel)
 $buyer = new \Shoplemo\Model\Buyer;
-$buyer->setIdentityNumber("TC_KIMLIK"); // kişiye ait vatandaşlık numarası (kyc prosedürü gerektiren durumlar için yollayabilirsiniz.)
+$buyer->setIdentityNumber('TC_KIMLIK'); // kişiye ait vatandaşlık numarası (kyc prosedürü gerektiren durumlar için yollayabilirsiniz.)
 $buyer->setName('Emrah');
 $buyer->setSurname('ÖZDEMİR');
-$buyer->setGsm("905300000000"); // telefon numarası
-$buyer->setCity("Izmir"); // şehir
-$buyer->setCountry("Turkey"); // ülke
+$buyer->setGsm('905300000000'); // telefon numarası
+$buyer->setCity('Izmir'); // şehir
+$buyer->setCountry('Turkey'); // ülke
 
 $shipping = new \Shoplemo\Model\Shipping;
-$shipping->setFullName("EMRAH OZDEMIR"); // alıcının adı
-$shipping->setPhone("905300000000"); // alıcının telefon numarası 
-$shipping->setAddress("PHP Caddesi No:7/4 Daire:10"); // Adres
-$shipping->setPostalCode("35000"); // posta kutusu
+$shipping->setFullName('EMRAH OZDEMIR'); // alıcının adı
+$shipping->setPhone('905300000000'); // alıcının telefon numarası 
+$shipping->setAddress('PHP Caddesi No:7/4 Daire:10'); // Adres
+$shipping->setPostalCode('35000'); // posta kutusu
 $shipping->setCity('Izmir'); //şehir
-$shipping->setCountry("Turkey"); // ülke
+$shipping->setCountry('Turkey'); // ülke
 
 $billing = new \Shoplemo\Model\Billing;
-$billing->setFullName("EMRAH OZDEMIR"); // fatura kesilecek kişinin yada kurumun adı
-$billing->setTaxNumber("XXXXXXXX"); // kurumlar için vergi numarası, şahıslar için vatandaşlık numarası
-$billing->setTaxHouse("IZMIR"); // kurumlar için vergi dairesi, şahıslar için yaşadığı şehir
-$billing->setPhone("905300000000"); // atura kesilecek kişinin telefon numarası 
-$billing->setAddress("PHP Caddesi No:7/4 Daire:10"); // atura kesilecek kişinin adresi
-$billing->setPostalCode("35000"); // posta kutusu
+$billing->setFullName('EMRAH OZDEMIR'); // fatura kesilecek kişinin yada kurumun adı
+$billing->setTaxNumber('XXXXXXXX'); // kurumlar için vergi numarası, şahıslar için vatandaşlık numarası
+$billing->setTaxHouse('IZMIR'); // kurumlar için vergi dairesi, şahıslar için yaşadığı şehir
+$billing->setPhone('905300000000'); // atura kesilecek kişinin telefon numarası 
+$billing->setAddress('PHP Caddesi No:7/4 Daire:10'); // atura kesilecek kişinin adresi
+$billing->setPostalCode('35000'); // posta kutusu
 $billing->setCity('Izmir'); //şehir
-$billing->setCountry("Turkey"); // ülke
+$billing->setCountry('Turkey'); // ülke
 
 // yapılan tanımlamaları $request içerisine aktarıyoruz.
 $request->setBasket($basket);

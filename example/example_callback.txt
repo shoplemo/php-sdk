@@ -1,0 +1,123 @@
+/// FAILED
+
+[status] => success 
+[data] => {
+  "hash": "UaJqXnDOuBPMEFmDa5G/4c7Ya5UTyodPERsZvbLHN74=",
+  "progress_id": "8433944333",
+  "payment": {
+    "payment_status": "FAILED",
+    "delivery_status": "FAILED",
+    "progress_id": "8433944333",
+    "total_price": "300.00",
+    "paid_price": null,
+    "currency": "TRY",
+    "start_date": "2020-01-20 03:41:12",
+    "end_date": "2020-01-20 03:44:00",
+    "user_message": null,
+    "error_message": "Kart Sahibinden 3D Onayı Alınamadı"
+  },
+  "buyer": {
+    "name": "Emrah",
+    "surname": "ÖZDEMİR",
+    "email": "mail@address.com",
+    "gsm": "530000000"
+  },
+  "custom_params": false
+}
+
+// SUCCESS
+
+[status] => success
+[data] => {
+  "hash": "3+50zBKP3YcIwpid8S6Dy/f7qASBYinu7Qnf3hRL7dc=",
+  "progress_id": "9896375632",
+  "payment": {
+    "payment_status": "COMPLETED",
+    "delivery_status": "COMPLETED",
+    "progress_id": "9896375632",
+    "total_price": "1.00",
+    "paid_price": "1.00",
+    "currency": "TRY",
+    "start_date": "2020-01-20 23:30:22",
+    "end_date": "2020-01-20 23:30:46",
+    "user_message": null,
+    "error_message": null
+  },
+  "buyer": {
+    "name": "Emrah",
+    "surname": "ÖZDEMİR",
+    "email": "mail@address.com",
+    "gsm": "530000000"
+  },
+  "order": {
+    "order_group": {
+      "pid": "9896375632",
+      "total_price_currency_id": "TRY",
+      "total_price": "1.00",
+      "total_payment_gain": "0.70",
+      "date": "2020-01-20 23:30:22",
+      "order_group_payment_completion_date": "2020-01-20 23:30:46",
+      "reason_message": null
+    },
+    "cargo_info": [
+      {
+        "currency_id": "TRY",
+        "price": "0.00",
+        "method": "FREE",
+        "iso_code": "TL",
+        "cargo_company": "Dijital Teslimat"
+      }
+    ],
+    "cargo_address": {
+      "full_name": "Emrah ÖZDEMİR",
+      "address": "Atıfbey Mah. 67 Sok. No: 33 ",
+      "postal_code": "35410",
+      "mobile_number": "90530000000",
+      "person_id": null,
+      "company_name": "0",
+      "company_tax_id": "0",
+      "company_tax_house": "0",
+      "city_name": "İzmir",
+      "district_name": "Gaziemir",
+      "neighbourhood_name": "Atıfbey"
+    },
+    "invoice_address": {
+      "full_name": "Emrah ÖZDEMİR",
+      "address": "Atıfbey Mah. 67 Sok. No: 33 ",
+      "postal_code": "35410",
+      "mobile_number": "90530000000",
+      "person_id": null,
+      "company_name": "0",
+      "company_tax_id": "0",
+      "company_tax_house": "0",
+      "city_name": "İzmir",
+      "district_name": "Gaziemir",
+      "neighbourhood_name": "Atıfbey"
+    },
+    "payment_details": [
+      {
+        "type": "PAYMENT",
+        "currency_id": "TRY",
+        "price": "1.00",
+        "paid_price": "1.00",
+        "status": "COMPLETED",
+        "date": "2020-01-20 23:30:46"
+      }
+    ],
+    "order_items": [
+      {
+        "item": {
+          "title": "Dijital Test Ürünü",
+          "price": "1.00",
+          "quantity": "1",
+          "currency_id": "1",
+          "reason_message": null,
+          "total_price": 1
+        },
+        "order_opt": null
+      }
+    ],
+    "can_survey": true
+  },
+  "custom_params": false
+}
