@@ -39,7 +39,7 @@ require_once('/path/to/php-sdk/Bootstrap.php');
 
 ```php
 $config = new \Shoplemo\Config();
-$config->setApiKey('TEST')|
+$config->setAPIKey('TEST')|
 $config->setSecretKey('TEST');
 $config->setServiceBaseUrl('https://payment.shoplemo.com');
 

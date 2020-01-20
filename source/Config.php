@@ -14,12 +14,12 @@ class Config
 		return $this->sdkVersion;
 	}
 
-	public function getApiKey()
+	public function getAPIKey()
 	{
 		return $this->apiKey;
 	}
 
-	public function setApiKey($apiKey)
+	public function setAPIKey($apiKey)
 	{
 		$this->apiKey = $apiKey;
 	}
