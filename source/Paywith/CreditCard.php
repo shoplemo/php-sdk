@@ -20,6 +20,7 @@ class CreditCard extends Request
     function __construct(Config $config)
     {
         parent::__construct($config, self::PATH);
+		$this->buyer_details = new Model\Buyer;
     }
 
     public function getUserEmail()

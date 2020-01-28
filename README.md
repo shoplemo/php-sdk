@@ -51,18 +51,18 @@ $request->setCustomParams(json_encode(['custom_param1' => 'deneme'])); // ödeme
 
 //sepet oluşturuyoruz;
 $basket = new \Shoplemo\Model\Basket;
-$basket->setTotalPrice(20); // sepetteki ürünlerin toplam tutarını iletiyoruz. Bu aynı zamanda kullanıcıdan alınacak ödeme tutarıdır.
+$basket->setTotalPrice(2000); // sepetteki ürünlerin toplam tutarını iletiyoruz. Bu aynı zamanda kullanıcıdan alınacak ödeme tutarıdır. (toplam tutar * 100)
 
 //sepet eklemek için ürün oluşturuyoruz;
 $item1  = new \Shoplemo\Model\BasketItem;
 $item1->setName('Test 1');
-$item1->setPrice(10);
+$item1->setPrice(1000); //price *100
 $item1->setType(\Shoplemo\Model\BasketItem::DIGITAL); // dijital ürün
 $item1->setQuantity(1);
 
 $item2  = new \Shoplemo\Model\BasketItem;
 $item2->setName('Test 2');
-$item2->setPrice(10);
+$item2->setPrice(1000); // price * 100
 $item2->setType(\Shoplemo\Model\BasketItem::PHYSICAL); // fiziksel ürün
 $item2->setQuantity(1);
 

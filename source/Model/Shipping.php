@@ -11,7 +11,7 @@ class Shipping extends JsonSerializableModel
 	private $address;
 	private $city;
 	private $country;
-	private $postal_code;
+	private $postalcode;
 
 	function __construct()
 	{
@@ -69,12 +69,12 @@ class Shipping extends JsonSerializableModel
 
 	public function getPostalCode()
 	{
-		return $this->postal_code;
+		return $this->postalcode;
 	}
 
-	public function setPostalCode($postal_code)
+	public function setPostalCode($postalcode)
 	{
-		$this->postal_code = $postal_code;
+		$this->postalcode = $postalcode;
 	}
 
 	public function jsonSerialize()
