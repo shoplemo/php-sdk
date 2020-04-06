@@ -7,7 +7,7 @@ class Config
     private $apiKey;
     private $secretKey;
     private $serviceBaseUrl;
-    private $sdkVersion = '1.0.1';
+    private $sdkVersion = '1.3.0';
 
     public function getSDKVersion()
     {
