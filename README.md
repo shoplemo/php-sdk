@@ -49,6 +49,17 @@ $request = new \Shoplemo\Paywith\CreditCard($config);
 $request->setUserEmail('test@shoplemo.tdl'); // ödemeyi yapacak kullanıcının email adresi
 $request->setCustomParams(json_encode(['custom_param1' => 'deneme'])); // ödeme işlemi başlamadan önce işlemi takip etmek isteyebileceğiniz parametreleri iletebilirsiniz. Bu parametre Json formatında olmalıdır.
 
+// dil seçimi yapmak isterseniz; aşağıdaki parametreyi eklemeniz gerekir.
+$request->setLanguage('tr'); // en: İngilizce, tr: Türkçe
+
+// başarılı ödeme sonrası kullanıcınızı sitenizdeki başka bir adrese yönlendirmek istiyorsanız; bu parametreyi ayarlamanız gerekir.
+$request->setRedirectUrl("https://www.siteniz.com/hedef");
+
+// başarısız ödemeler için ise bunu eklemelisiniz;
+$request->setFailRedirectUrl("https://www.siteniz.com/hedef");
+
+// callback yani IPN adresinizi Shoplemo mağaza panelinizden ayarlayabilirsiniz. İlgili adresleri sadece Shoplemo teslimat botları ziyaret ve kullanıcınız görmez. Siparişle ilgili işlemleri callback adresinizde yaptırmalısıız.
+
 //sepet oluşturuyoruz;
 $basket = new \Shoplemo\Model\Basket;
 $basket->setTotalPrice(2000); // sepetteki ürünlerin toplam tutarını iletiyoruz. Bu aynı zamanda kullanıcıdan alınacak ödeme tutarıdır. (toplam tutar * 100)
@@ -75,19 +86,19 @@ $buyer = new \Shoplemo\Model\Buyer;
 $buyer->setIdentityNumber('TC_KIMLIK'); // kişiye ait vatandaşlık numarası (kyc prosedürü gerektiren durumlar için yollayabilirsiniz.)
 $buyer->setName('Emrah');
 $buyer->setSurname('ÖZDEMİR');
-$buyer->setGsm('905300000000'); // telefon numarası
+$buyer->setGsm('905300000000'); // telefon numarası (doğru bir biçimde ilettiğinizde ödeme ekranında kullanıcıdan bu bilgi talep edilmez.)
 $buyer->setCity('Izmir'); // şehir
 $buyer->setCountry('Turkey'); // ülke
-
-$shipping = new \Shoplemo\Model\Shipping;
+// (opsiyonel)
+$shipping = new \Shoplemo\Model\Shipping; 
 $shipping->setFullName('EMRAH OZDEMIR'); // alıcının adı
 $shipping->setPhone('905300000000'); // alıcının telefon numarası 
 $shipping->setAddress('PHP Caddesi No:7/4 Daire:10'); // Adres
 $shipping->setPostalCode('35000'); // posta kutusu
 $shipping->setCity('Izmir'); //şehir
 $shipping->setCountry('Turkey'); // ülke
-
-$billing = new \Shoplemo\Model\Billing;
+// (opsiyonel)
+$billing = new \Shoplemo\Model\Billing; 
 $billing->setFullName('EMRAH OZDEMIR'); // fatura kesilecek kişinin yada kurumun adı
 $billing->setTaxNumber('XXXXXXXX'); // kurumlar için vergi numarası, şahıslar için vatandaşlık numarası
 $billing->setTaxHouse('IZMIR'); // kurumlar için vergi dairesi, şahıslar için yaşadığı şehir

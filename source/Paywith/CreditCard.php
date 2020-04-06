@@ -2,25 +2,33 @@
 
 namespace Shoplemo\Paywith;
 
-use Shoplemo\Model;
 use Shoplemo\Config;
+use Shoplemo\Model;
 use Shoplemo\Request;
 
 class CreditCard extends Request
 {
     const PATH = '/paywith/credit_card';
 
+    private $language;
     private $user_email;
     private $basket_details;
     private $buyer_details;
     private $shipping_details;
     private $billing_details;
     private $custom_params;
+    private $redirect_url;
+    private $fail_redirect_url;
+    private $callback_url;
 
-    function __construct(Config $config)
+    public function __construct(Config $config)
     {
         parent::__construct($config, self::PATH);
-		$this->buyer_details = new Model\Buyer;
+        $this->buyer_details = new Model\Buyer();
+        $this->language = 'tr';
+        $this->redirect_url = '';
+        $this->fail_redirect_url = '';
+        $this->callback_url = '';
     }
 
     public function getUserEmail()
@@ -81,6 +89,46 @@ class CreditCard extends Request
     public function setCustomParams($custom_params)
     {
         $this->custom_params = $custom_params;
+    }
+
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+    }
+
+    public function getRedirectUrl()
+    {
+        return $this->redirect_url;
+    }
+
+    public function setRedirectUrl($redirect_url)
+    {
+        $this->redirect_url = $redirect_url;
+    }
+
+    public function getFailRedirectUrl()
+    {
+        return $this->fail_redirect_url;
+    }
+
+    public function setFailRedirectUrl($fail_redirect_url)
+    {
+        $this->fail_redirect_url = $fail_redirect_url;
+    }
+
+    public function getCallbackUrl()
+    {
+        return $this->callback_url;
+    }
+
+    public function setCallbackUrl($callback_url)
+    {
+        $this->callback_url = $callback_url;
     }
 
     public function jsonSerialize()
