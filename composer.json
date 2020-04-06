@@ -1,5 +1,6 @@
 {
     "name": "shoplemo/php-sdk",
+    "version": "1.0.1",
     "type": "library",
     "description": "shoplemo checkout api php client",
     "homepage": "https://www.shoplemo.com",
