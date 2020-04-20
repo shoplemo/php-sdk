@@ -79,7 +79,7 @@
                 ?>
                     <div id="shoplemo-area">
                         <script src="//payment.shoplemo.com/assets/js/shoplemo.js"></script>
-                        <iframe src="<?php $response['url']; ?>" id="shoplemoiframe" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
+                        <iframe src="<?= $response['url']; ?>" id="shoplemoiframe" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
 
                         <script type="text/javascript">
                             setTimeout(function(){ 
